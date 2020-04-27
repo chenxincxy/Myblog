@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/blog?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=true
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: info
+    com.lrm: debug
+  file: log/blog-dev.log
+
+http:
+  encoding:
+    charset: UTF-8
+
+
+server:
+  port: 8060
+  tomcat:
+    uri-encoding: UTF-8
